@@ -67,14 +67,14 @@ public class AnggotaPerpustakaan extends Notifikasi {
     public void lihatRiwayatPeminjaman() {
     System.out.println("Riwayat Peminjaman untuk Anggota: " + nama);
     if (!riwayatPeminjaman.isEmpty()) {
-        riwayatPeminjaman.stream().forEach((transaksi) -> {
-            System.out.println(transaksi);
-        });
+    for (TransaksiPeminjaman transaksi : riwayatPeminjaman) {
+        System.out.println(transaksi);
+    }
     
     }else{
-    System.out.println("Tidak ada riwayat peminjaman.");
-    }
+    System.out.println("Tidak ada riwayat peminjaman.");
 
+    }
   }
 }
 
